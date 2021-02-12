@@ -20,4 +20,4 @@ function saludarEstudiante(estudiante) {
 
 for(var estudiante of estudiantes) {
     saludarEstudiante(estudiante)
-}
+} 
