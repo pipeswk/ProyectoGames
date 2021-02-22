@@ -21,3 +21,38 @@ var posicionElemento = frutas.indexOf("Banana");  // Devuelve la posicion del el
 
 
 
+//<=================================================================================================================>
+
+var articulos = [
+    { nombre: "Bici", costo: 3000 },
+    { nombre: "Televisor", costo: 2500 },
+    { nombre: "Libro", costo: 320 },
+    { nombre: "Celular", costo: 2500 },
+    { nombre: "Laptop", costo: 20000 },
+    { nombre: "Smart Watch", costo: 3000 },
+    { nombre: "Audifonos", costo: 1700 }
+];
+
+var articulosFiltrados = articulos.filter(function(articulo) {
+    return articulo.costo <= 1000        // Devuelve solo los articulos que sean menores o iguales a 1000
+});
+
+var nombreArticulo = articulos.map(function(articulo) {
+    return articulo.nombre
+});                       // Devuelve los nombres de los articulos
+
+var busquedaArticulo = articulos.find(function(articulo) {
+    return articulo.nombre === "Celular"        // Devuelve un articulo en especifico
+});
+
+
+articulos.forEach(function(articulo) {
+    console.log (articulo.nombre)    //  Muestra los nombres de los articulos
+});
+
+
+
+var articulosBaratos = articulos.some(function(articulo) {
+    return articulo.costo <= 5000
+});
+
